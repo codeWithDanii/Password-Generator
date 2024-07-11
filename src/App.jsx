@@ -2,10 +2,10 @@ import React, { useCallback, useEffect, useRef, useState } from "react";
 import "./App.css";
 
 function App() {
-  const [length, setLength] = useState(8);
+  const [length, setLength] = useState(15);
   const [password, setPassword] = useState("");
-  const [numberAllow, setNumberAllow] = useState(false);
-  const [characterAllow, setCharacterAllow] = useState(false);
+  const [numberAllow, setNumberAllow] = useState(true);
+  const [characterAllow, setCharacterAllow] = useState(true);
   let btnRef = useRef();
 
   // Generating Random Password
@@ -63,7 +63,7 @@ function App() {
               type="range"
               className="cursor-pointer mr-1"
               min={6}
-              max={20}
+              max={30}
               id="range"
               value={length}
               onChange={(e) => setLength(Number(e.target.value))}
@@ -75,6 +75,7 @@ function App() {
               className="ml-5"
               type="checkbox"
               id="number"
+              checked
               onChange={() => setNumberAllow(!numberAllow)}
             />
             <label className="cursor-pointer pl-1" htmlFor="number">
@@ -86,6 +87,7 @@ function App() {
               className="ml-5 cursor-pointer"
               type="checkbox"
               id="character"
+              checked
               onChange={() => setCharacterAllow(!characterAllow)}
             />
 
