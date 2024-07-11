@@ -27,5 +27,5 @@ Make sure you have Node.js and npm (or yarn) installed on your local machine.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your-username/random-password-generator.git
+   git clone https://github.com/codeWithDanii/Password-Generator.git
 
